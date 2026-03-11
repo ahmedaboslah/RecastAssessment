@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:recasttask/core/resources/app_assets.dart';
 import 'package:recasttask/core/resources/app_typography.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/widgets/custom_social_button.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/Features/WelcomeScreen/widgets/custom_social_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  final VoidCallback onContinue;
+ 
 
-  const WelcomeScreen({super.key, required this.onContinue});
+  const WelcomeScreen({super.key, });
 
   @override
   Widget build(BuildContext context) {

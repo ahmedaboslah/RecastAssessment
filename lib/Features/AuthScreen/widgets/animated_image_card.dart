@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/themes/app_radius.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/core/themes/app_radius.dart';
 
 class AnimatedImageCard extends StatelessWidget {
   final String image;

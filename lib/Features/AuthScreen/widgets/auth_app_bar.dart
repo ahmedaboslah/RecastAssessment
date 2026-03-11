@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recasttask/core/resources/app_typography.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/widgets/animated_image_section.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/animated_image_section.dart';
 
 class AuthAppBar extends StatelessWidget {
   const AuthAppBar({super.key});

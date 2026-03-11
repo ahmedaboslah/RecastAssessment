@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:recasttask/core/resources/app_colors.dart';
 import 'package:recasttask/core/resources/app_typography.dart';
-import 'package:recasttask/screens/sign_in_screen.dart';
-import 'package:recasttask/screens/welcome_screen.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/widgets/auth_app_bar.dart';
-import 'package:recasttask/widgets/custom_elevated_button.dart';
-import 'package:recasttask/widgets/sign_in_footer.dart';
-import 'package:recasttask/widgets/welcome_footer.dart';
+import 'package:recasttask/Features/SignInScreen/sign_in_screen.dart';
+import 'package:recasttask/Features/WelcomeScreen/welcome_screen.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/auth_app_bar.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/custom_elevated_button.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/sign_in_footer.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/welcome_footer.dart';
 
 class MainAuthScreen extends StatefulWidget {
   const MainAuthScreen({super.key});
@@ -33,14 +33,11 @@ class _MainAuthScreenState extends State<MainAuthScreen> {
   void _handleButtonPress() {
     if (showSignIn) {
       if (_formKey.currentState?.validate() ?? false) {
-        // Validation passed - handle Sign Up success
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(const SnackBar(content: Text('Sign Up Successful!')));
       }
-    } else {
-      // Logic for "Continue with OasisNow"
-    }
+    } 
   }
 
   @override
@@ -69,13 +66,7 @@ class _MainAuthScreenState extends State<MainAuthScreen> {
                       (Widget child, Animation<double> animation) {
                         return FadeTransition(
                           opacity: animation,
-                          child: SlideTransition(
-                            position: Tween<Offset>(
-                              begin: const Offset(0.0, 0.1),
-                              end: Offset.zero,
-                            ).animate(animation),
-                            child: child,
-                          ),
+                          child:  child,
                         );
                       },
                   child: showSignIn
@@ -85,7 +76,7 @@ class _MainAuthScreenState extends State<MainAuthScreen> {
                           passwordController: _passwordController,
                           confirmPasswordController: _confirmPasswordController,
                         )
-                      : WelcomeScreen(onContinue: _switchToSignIn),
+                      : WelcomeScreen(),
                 ),
                 const SizedBox(height: AppSpacing.p20),
                 CustomElevatedButton(

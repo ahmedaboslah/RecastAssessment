@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/widgets/custom_password_text_field.dart';
-import 'package:recasttask/widgets/custom_text_form_field.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/Features/SignInScreen/widgets/custom_password_text_field.dart';
+import 'package:recasttask/Features/SignInScreen/widgets/custom_text_form_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({

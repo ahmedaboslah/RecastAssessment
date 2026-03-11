@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recasttask/core/resources/app_colors.dart';
-import 'package:recasttask/themes/app_radius.dart';
-import 'package:recasttask/themes/app_spacing.dart';
+import 'package:recasttask/core/themes/app_radius.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({

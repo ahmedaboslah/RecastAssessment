@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:recasttask/themes/app_spacing.dart';
-import 'package:recasttask/widgets/animated_image_row.dart';
+import 'package:recasttask/core/themes/app_spacing.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/animated_image_row.dart';
 import 'package:recasttask/core/data/app_images_list.dart';
 
 class AnimatedImageSection extends StatelessWidget {

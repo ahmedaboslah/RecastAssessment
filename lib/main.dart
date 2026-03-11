@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recasttask/screens/main_auth_screen.dart';
+import 'package:recasttask/Features/AuthScreen/main_auth_screen.dart';
 
 void main() {
   runApp(const MyApp());

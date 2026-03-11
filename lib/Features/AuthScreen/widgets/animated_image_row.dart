@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recasttask/widgets/animated_image_card.dart';
+import 'package:recasttask/Features/AuthScreen/widgets/animated_image_card.dart';
 
 class AnimatedImageRow extends StatefulWidget {
   final List<String> items;
@@ -27,7 +27,7 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
   @override
   void initState() {
     super.initState();
-    final initialOffset = widget.items.length * 156.0 * 10; 
+    final initialOffset = widget.items.length * 120.0 * 10;
 
     _scrollController = ScrollController(
       initialScrollOffset: widget.isLeftToRight ? 0.0 : initialOffset * 2,
@@ -37,8 +37,6 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
       vsync: this,
       duration: const Duration(seconds: 1),
     )..addListener(_updateScroll);
-
-   
 
     _animationController.repeat();
   }
@@ -69,8 +67,6 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
 
     _scrollController.jumpTo(nextOffset);
   }
-
-  
 
   @override
   void dispose() {
