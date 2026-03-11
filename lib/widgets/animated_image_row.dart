@@ -23,12 +23,11 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
     with SingleTickerProviderStateMixin {
   late ScrollController _scrollController;
   late AnimationController _animationController;
-  int _activeItemIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    final initialOffset = widget.items.length * 156.0 * 10; //
+    final initialOffset = widget.items.length * 156.0 * 10; 
 
     _scrollController = ScrollController(
       initialScrollOffset: widget.isLeftToRight ? 0.0 : initialOffset * 2,
@@ -39,7 +38,7 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
       duration: const Duration(seconds: 1),
     )..addListener(_updateScroll);
 
-    _scrollController.addListener(_updateActiveItem);
+   
 
     _animationController.repeat();
   }
@@ -71,25 +70,7 @@ class _AnimatedImageRowState extends State<AnimatedImageRow>
     _scrollController.jumpTo(nextOffset);
   }
 
-  void _updateActiveItem() {
-    if (!_scrollController.hasClients) return;
-
-    final offset = _scrollController.offset;
-    final viewportWidth = _scrollController.position.viewportDimension;
-    final centerOffset = offset + (viewportWidth / 2);
-
-    final centeredItemRawIndex = (centerOffset / 156.0).floor();
-
-    final realIndex = centeredItemRawIndex % widget.items.length;
-
-    if (_activeItemIndex != realIndex) {
-      if (mounted) {
-        setState(() {
-          _activeItemIndex = realIndex;
-        });
-      }
-    }
-  }
+  
 
   @override
   void dispose() {

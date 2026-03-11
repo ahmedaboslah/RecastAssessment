@@ -34,13 +34,6 @@ class AppTypography {
         fontSize: 9,
         color: AppColors.textSecondary,
       ),
-      bodyLarge: const TextStyle(
-        fontFamily: fontFamily,
-        fontWeight: FontWeight.w500,
-        fontSize: 16,
-        color: AppColors.textPrimary,
-        height: 1.45,
-      ),
       bodySmall: const TextStyle(
         fontFamily: fontFamily,
         fontWeight: FontWeight.w700,

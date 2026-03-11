@@ -12,7 +12,7 @@ class SignInFooter extends StatelessWidget {
     return  Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Passwords did not match, try again.', style: textTheme.headlineSmall!.copyWith(color: AppColors.warning))
+            Text('Passwords did not match, try again.', style: textTheme.titleSmall!.copyWith(color: AppColors.warning))
           ],
         );
   }

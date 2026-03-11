@@ -12,7 +12,7 @@ class WelcomeFooter extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Already have an account? ', style: textTheme.headlineSmall),
+        Text('Already have an account? ', style: textTheme.titleSmall),
         GestureDetector(
           onTap: onContinue,
           child: Text(
